@@ -131,6 +131,7 @@ int main(void)
 	  {
 		  flag = 0;
 	  }
+	  HAL_GPIO_WritePin(GPIOA, red1, GPIO_PIN_RESET);
 	  HAL_GPIO_WritePin(GPIOA, red2, GPIO_PIN_SET);
 	  	  if(HAL_GPIO_ReadPin(GPIOA, kolona1) == 1)
 	  	  {
@@ -148,6 +149,7 @@ int main(void)
 	  	  {
 	  		flag = 0;
 	  	  }
+	  	HAL_GPIO_WritePin(GPIOA, red2, GPIO_PIN_RESET);
 	  	HAL_GPIO_WritePin(GPIOA, red3, GPIO_PIN_SET);
   		  if(HAL_GPIO_ReadPin(GPIOA, kolona1) == 1)
   		  {
@@ -165,7 +167,7 @@ int main(void)
 		  {
 	    	  flag = 0;
 		  }
-
+	      HAL_GPIO_WritePin(GPIOA, red3, GPIO_PIN_RESET);
 	  	HAL_GPIO_WritePin(GPIOA, red4, GPIO_PIN_SET);
           	if(HAL_GPIO_ReadPin(GPIOA, kolona1) == 1)
 	  		{
@@ -183,6 +185,7 @@ int main(void)
 	  		{
 	  			flag = 0;
 	  		}
+	  		HAL_GPIO_WritePin(GPIOA, red4, GPIO_PIN_RESET);
 	  if(flag == 1)
 	  {
 		  HAL_GPIO_WritePin(GPIOA, red1, GPIO_PIN_SET);
@@ -194,6 +197,7 @@ int main(void)
 		  {
 			  HAL_GPIO_WritePin(GPIOA, ledRed, GPIO_PIN_RESET);
 		  }
+		  HAL_GPIO_WritePin(GPIOA, red1, GPIO_PIN_RESET);
 	  }
 	  else{}
 
